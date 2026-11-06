@@ -1,0 +1,38 @@
+MIDNIGHT'S BAR — INTEGRAÇÃO SUPABASE
+
+CONTEÚDO
+- index.html / style.css: site público e visual
+- app.js: carrega drinks do banco e grava pedidos de orçamento no Supabase
+- admin.html / admin.js: login por e-mail/senha, gestão de drinks, fotos e pedidos
+- supabase-client.js: Project URL e Publishable Key fornecidas
+- supabase-setup.sql: tabelas, RLS e políticas de Storage
+
+CONFIGURAÇÃO OBRIGATÓRIA
+1. No Supabase, abra SQL Editor > New query.
+2. Abra supabase-setup.sql, copie todo o conteúdo e execute (Run).
+3. Vá a Authentication > Users > Add user. Crie seu usuário administrativo com e-mail e senha fortes. Se houver opção de confirmação, confirme o usuário.
+4. Copie o UUID do usuário criado.
+5. No SQL Editor, execute:
+   insert into public.admin_users (user_id) values ('COLE-O-UUID-AQUI');
+6. No Authentication > URL Configuration, configure a URL do site publicado em Site URL e adicione também os endereços de desenvolvimento em Redirect URLs, se usar.
+7. Troque o WhatsApp de exemplo 5522999999999 no arquivo app.js pelo número comercial, com DDI e DDD e somente dígitos.
+8. Publique TODOS os arquivos juntos em um host estático com HTTPS (Netlify, Vercel, Cloudflare Pages ou hospedagem própria).
+9. Teste o site publicado: drinks ativos devem aparecer; envie um orçamento de teste; entre em /admin.html; cadastre um drink com foto; confirme que ele aparece no site.
+
+IMPORTANTE SOBRE EXECUÇÃO LOCAL
+Como os arquivos usam JavaScript ES Modules, não abra index.html com file://. Rode um servidor local (por exemplo, VS Code + extensão Live Server) ou publique o site em HTTPS.
+
+SEGURANÇA
+- A Publishable Key é feita para uso no navegador, desde que RLS esteja habilitado e as políticas sejam aplicadas.
+- Nunca exponha Secret Key, service_role, senha do banco ou credenciais privadas no front-end.
+- A tabela admin_users concede privilégios administrativos. Só insira nela UUIDs de pessoas que devem ser administradoras.
+- O cadastro público de orçamento permite INSERT, mas não permite ler os pedidos. Somente administradores listados podem ler/alterar/excluir.
+- O bucket drinks-images é público para leitura das imagens; uploads, alterações e exclusões exigem administrador.
+- Ative CAPTCHA/anti-spam ou rate limiting antes de campanhas públicas. Uma política INSERT aberta pode receber spam.
+- O fluxo de redefinição de senha e convite de outros administradores não está incluído nesta primeira integração.
+- A política RLS é a barreira real de segurança; ocultar páginas ou botões não é proteção.
+
+NOTAS
+- O site grava o orçamento no banco antes de abrir o WhatsApp.
+- Se o navegador bloquear pop-ups, permita pop-ups para o domínio ou ajuste o fluxo do WhatsApp.
+- Se já existirem tabelas com esses nomes, revise o schema antes de executar; o SQL usa CREATE TABLE IF NOT EXISTS e não altera automaticamente colunas preexistentes.

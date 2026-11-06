@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111027">
+  <title>Painel administrativo | Midnight's Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+<header class="admin-header">
+  <a class="brand" href="index.html"><img src="logo-midnights-bar.png" alt="Midnight's Bar"><span class="brand-wordmark">MIDNIGHT'S <small>PAINEL ADMINISTRATIVO</small></span></a>
+  <div class="admin-header-actions"><a href="index.html">Ver site ↗</a><button id="logout-btn" hidden>Sair</button></div>
+</header>
+
+<div id="login-screen" class="login-screen">
+  <form class="login-card" id="login-form">
+    <p class="eyebrow eyebrow-dark">ACESSO RESTRITO</p><h1>Bem-vindo de volta.</h1>
+    <p>Entre com seu e-mail e senha de administrador.</p>
+    <label for="email">E-mail</label><input id="email" type="email" autocomplete="username" required placeholder="voce@email.com">
+    <label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required placeholder="Sua senha">
+    <button class="admin-btn gold" style="width:100%;margin-top:16px" type="submit">Entrar no painel</button>
+    <p id="login-error" role="alert" style="color:#9b3548"></p>
+  </form>
+</div>
+
+<main class="admin-wrap" id="dashboard" hidden>
+  <div class="admin-title"><div><p class="eyebrow eyebrow-dark">MIDNIGHT'S BAR / GESTÃO</p><h1>Painel administrativo</h1><p>Gerencie sua carta de drinks e acompanhe os pedidos de orçamento.</p></div></div>
+  <div class="admin-stats">
+    <div class="stat-card"><span>DRINKS CADASTRADOS</span><strong id="stat-drinks">0</strong></div>
+    <div class="stat-card"><span>PEDIDOS RECEBIDOS</span><strong id="stat-quotes">0</strong></div>
+    <div class="stat-card"><span>PEDIDOS NOVOS</span><strong id="stat-new">0</strong></div>
+  </div>
+  <div class="admin-tabs">
+    <button class="admin-tab active" data-tab="drinks-panel">Drinks</button>
+    <button class="admin-tab" data-tab="quotes-panel">Orçamentos</button>
+  </div>
+
+  <section class="admin-panel active" id="drinks-panel">
+    <div class="admin-card">
+      <h2 id="drink-form-title">Cadastrar novo drink</h2>
+      <form id="drink-form">
+        <input type="hidden" id="drink-id">
+        <div class="admin-form-grid">
+          <div class="admin-field"><label for="drink-name">Nome do drink *</label><input id="drink-name" required maxlength="80"></div>
+          <div class="admin-field"><label for="drink-category">Categoria</label><input id="drink-category" maxlength="60"></div>
+          <div class="admin-field"><label for="drink-price">Preço (R$)</label><input id="drink-price" type="number" min="0" step="0.01"></div>
+          <div class="admin-field"><label for="drink-image-file">Foto do drink</label><input id="drink-image-file" type="file" accept="image/png,image/jpeg,image/webp"></div>
+          <div class="admin-field full"><label for="drink-description">Descrição</label><textarea id="drink-description" rows="2" maxlength="300"></textarea></div>
+          <div class="admin-field"><label><input id="drink-active" type="checkbox" checked style="width:auto"> Exibir no site</label></div>
+        </div>
+        <div class="admin-actions"><button class="admin-btn gold" type="submit">Salvar drink</button><button class="admin-btn light" type="button" id="cancel-edit">Limpar formulário</button></div>
+        <p id="drink-feedback" aria-live="polite" style="font-size:10px;margin-top:10px"></p>
+      </form>
+    </div>
+    <div class="admin-card"><h2>Drinks do cardápio</h2><div id="drink-admin-list" class="admin-list"></div></div>
+  </section>
+
+  <section class="admin-panel" id="quotes-panel">
+    <div class="admin-card"><h2>Pedidos de orçamento</h2><div id="quote-list"></div></div>
+  </section>
+</main>
+<script type="module" src="admin.js"></script>
+</body></html>

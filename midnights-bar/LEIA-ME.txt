@@ -1,0 +1,21 @@
+MIDNIGHT'S BAR — SITE + PAINEL ADMINISTRATIVO
+
+Arquivos:
+- index.html: site público
+- style.css: estilos do site e painel
+- app.js: catálogo dinâmico e registro local do formulário
+- admin.html / admin.js: painel de gestão
+- logo-midnights-bar.png: logo enviada
+
+Acesso:
+1. Extraia os arquivos para a mesma pasta.
+2. Abra admin.html.
+3. PIN inicial: 1234. Altere em Configurações.
+4. Cadastre/edite/exclua drinks, preços e imagens; oculte itens sem excluir.
+5. Consulte pedidos na aba Orçamentos, altere status e faça backup JSON.
+
+Limitações importantes:
+Esta é uma versão front-end/local. O PIN é apenas uma barreira de conveniência, não uma autenticação segura. Os dados ficam no localStorage do navegador e dispositivo. O formulário só registra os pedidos localmente quando aberto no mesmo navegador/dispositivo; o WhatsApp também abre para encaminhamento. Para gestão real, multiusuário e pedidos centralizados, é necessário backend, banco de dados e autenticação no servidor (por exemplo, Supabase/Firebase).
+
+WhatsApp:
+Substitua 5522999999999 nos arquivos app.js e admin.js pelo número real com DDI e DDD.

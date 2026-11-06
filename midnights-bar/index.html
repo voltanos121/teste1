@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Midnight's Bar: bar móvel, barman profissional e coquetelaria personalizada para casamentos, festas e eventos em Araruama e região.">
+  <meta name="theme-color" content="#111027">
+  <title>Midnight's Bar | Coquetelaria para eventos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Midnight's Bar - início">
+      <img src="logo-midnights-bar.png" alt="Logo Midnight's Bar">
+      <span class="brand-wordmark">MIDNIGHT'S <small>BAR EXPERIENCE</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#sobre">A experiência</a><a href="#servicos">Serviços</a><a href="#cardapio">Drinks</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a>
+      <a class="nav-mobile-cta" href="#orcamento">Solicitar orçamento <b>↗</b></a>
+    </nav>
+    <a class="header-button" href="#orcamento">Solicitar orçamento <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><i></i> COQUETELARIA • EVENTOS • EXPERIÊNCIAS</p>
+        <h1>Uma noite especial<br>merece um brinde <em>à altura.</em></h1>
+        <p class="hero-description">Drinks autorais, atendimento impecável e um bar que faz parte do espetáculo. Levamos a experiência Midnight's até o seu evento.</p>
+        <div class="hero-buttons"><a class="button button-gold" href="#orcamento">Planejar meu evento <span>↗</span></a><a class="button button-ghost" href="#cardapio">Explorar os drinks <span>↓</span></a></div>
+        <div class="hero-proof"><span class="proof-star">✦</span><span>DETALHES QUE ENCANTAM. MOMENTOS QUE FICAM.</span></div>
+      </div>
+      <div class="hero-side-note">MIDNIGHT'S BAR <b>—</b> DESDE O PRIMEIRO BRINDE</div>
+      <a class="scroll-cue" href="#sobre" aria-label="Rolar para conhecer"><span></span> DESCUBRA</a>
+    </section>
+
+    <section class="intro section" id="sobre">
+      <div class="intro-visual">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1100&q=90" alt="Coquetel artesanal preparado com cuidado">
+        <div class="visual-caption"><b>01 / 04</b><span>A ARTE DA COQUETELARIA</span></div>
+      </div>
+      <div class="intro-text">
+        <p class="eyebrow eyebrow-dark"><i></i> MUITO ALÉM DO COPO</p>
+        <h2>Seu evento.<br>Nossa <em>assinatura.</em></h2>
+        <p>Na Midnight's Bar, cada detalhe é pensado para transformar encontros em boas histórias. Unimos técnica, criatividade e hospitalidade para criar uma experiência de bar que combina com a personalidade da sua celebração.</p>
+        <p>Do primeiro contato à apresentação de cada drink, nosso compromisso é entregar qualidade, cuidado e um atendimento que seus convidados vão lembrar.</p>
+        <div class="signature"><span class="signature-line"></span><span>MIDNIGHT'S BAR <small>COQUETELARIA COM PERSONALIDADE</small></span></div>
+      </div>
+    </section>
+
+    <section class="services section section-dark" id="servicos">
+      <div class="section-top"><div><p class="eyebrow"><i></i> EXPERIÊNCIAS SOB MEDIDA</p><h2>O cenário perfeito<br>para <em>celebrar.</em></h2></div><p class="section-lead">A estrutura e o cardápio são pensados de acordo com o estilo, o tamanho e a atmosfera do seu evento.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-index">01</span><div class="service-symbol">✧</div><h3>Casamentos</h3><p>Um bar especial para brindar um dos dias mais importantes da sua história.</p><a href="#orcamento" aria-label="Orçamento para casamento">↗</a></article>
+        <article class="service-card"><span class="service-index">02</span><div class="service-symbol">◇</div><h3>Festas particulares</h3><p>Aniversários, comemorações e encontros com um toque de exclusividade.</p><a href="#orcamento" aria-label="Orçamento para festa particular">↗</a></article>
+        <article class="service-card"><span class="service-index">03</span><div class="service-symbol">✳</div><h3>Eventos corporativos</h3><p>Receba clientes e equipes com serviço profissional e apresentação impecável.</p><a href="#orcamento" aria-label="Orçamento para evento corporativo">↗</a></article>
+        <article class="service-card"><span class="service-index">04</span><div class="service-symbol">✦</div><h3>Open bar</h3><p>Uma experiência completa de coquetelaria, planejada para seus convidados.</p><a href="#orcamento" aria-label="Orçamento para open bar">↗</a></article>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="cardapio">
+      <div class="section-top"><div><p class="eyebrow eyebrow-dark"><i></i> CARTA DE DRINKS</p><h2>Sabores que viram<br><em>boas memórias.</em></h2></div><p class="section-lead">Clássicos e criações especiais, selecionados para combinar com seu evento.</p></div>
+      <div class="drink-grid" id="public-drink-grid"></div>
+      <div class="menu-footnote">✦ Também criamos drinks exclusivos e opções sem álcool.</div>
+    </section>
+
+    <section class="feature-band"><div class="feature-content"><p class="eyebrow"><i></i> O DIFERENCIAL ESTÁ NOS DETALHES</p><h2>Hospitalidade em cada gesto.<br><em>Excelência em cada drink.</em></h2><div class="feature-points"><span>Ingredientes selecionados</span><span>Atendimento personalizado</span><span>Preparo na hora</span><span>Organização profissional</span></div></div></section>
+
+    <section class="gallery section" id="galeria">
+      <div class="section-top"><div><p class="eyebrow eyebrow-dark"><i></i> NOSSO UNIVERSO</p><h2>Momentos em<br><em>boa companhia.</em></h2></div><p class="section-lead">Uma prévia da atmosfera, dos sabores e dos detalhes que fazem parte da experiência Midnight's.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-large" data-image="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=90" aria-label="Ampliar foto de bar elegante"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=85" alt="Interior de bar elegante"><span>AMBIENTE & ATMOSFERA ↗</span></button>
+        <button class="gallery-item" data-image="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=90" aria-label="Ampliar foto de coquetel"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=85" alt="Coquetel artesanal"><span>ARTE EM CADA COPO ↗</span></button>
+        <button class="gallery-item" data-image="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600&q=90" aria-label="Ampliar foto de drink"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=85" alt="Drink preparado para servir"><span>DETALHES QUE ENCANTAM ↗</span></button>
+      </div>
+      <p class="gallery-disclaimer">Imagens ilustrativas. Substitua por registros dos seus próprios eventos para apresentar seu portfólio real.</p>
+    </section>
+
+    <section class="contact-section section-dark" id="contato">
+      <div class="contact-layout section" id="orcamento">
+        <div class="contact-copy"><p class="eyebrow"><i></i> VAMOS TIRAR SUA IDEIA DO PAPEL?</p><h2>Seu próximo evento<br>pode ser <em>inesquecível.</em></h2><p>Preencha os dados ao lado e envie sua solicitação. Vamos conversar sobre a melhor experiência para sua celebração.</p>
+          <div class="contact-line"><span>WHATSAPP</span><a href="https://wa.me/5522999999999" target="_blank" rel="noopener">(22) 99999-9999 ↗</a></div>
+          <div class="contact-line"><span>INSTAGRAM</span><a href="https://instagram.com/" target="_blank" rel="noopener">@midnightsbar ↗</a></div>
+          <div class="contact-line"><span>REGIÃO DE ATENDIMENTO</span><p>Araruama e região · RJ</p></div>
+        </div>
+        <form class="budget-form" id="budget-form">
+          <p class="form-kicker">FALE COM A MIDNIGHT'S</p><h3>Solicite seu orçamento</h3>
+          <label for="name">Seu nome</label><input id="name" name="name" type="text" placeholder="Como podemos te chamar?" required>
+          <div class="form-row"><div><label for="phone">Telefone</label><input id="phone" name="phone" type="tel" placeholder="(00) 00000-0000" required></div><div><label for="event">Tipo de evento</label><select id="event" name="event" required><option value="">Selecione</option><option>Casamento</option><option>Aniversário</option><option>Evento corporativo</option><option>Festa particular</option><option>Open bar</option><option>Outro</option></select></div></div>
+          <div class="form-row"><div><label for="date">Data prevista</label><input id="date" name="date" type="date"></div><div><label for="guests">Convidados</label><input id="guests" name="guests" type="number" min="1" placeholder="Ex.: 80"></div></div>
+          <label for="message">Conte um pouco sobre o evento</label><textarea id="message" name="message" rows="3" placeholder="Local, horário, estilo da festa..."></textarea>
+          <button class="button button-gold form-submit" type="submit">Enviar pelo WhatsApp <span>↗</span></button>
+          <small class="form-privacy">Ao enviar, seus dados serão encaminhados para o WhatsApp informado.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio"><img src="logo-midnights-bar.png" alt="Logo Midnight's Bar"><span class="brand-wordmark">MIDNIGHT'S <small>BAR EXPERIENCE</small></span></a>
+    <p>Coquetelaria feita para celebrar.</p>
+    <span>© 2026 Midnight's Bar. Todos os direitos reservados. · <a class="admin-entry" href="admin.html">Área administrativa</a></span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button class="lightbox-close" aria-label="Fechar imagem">×</button><img src="" alt="Imagem ampliada"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
