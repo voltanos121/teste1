@@ -81,7 +81,7 @@ async function submitQuote(event) {
   ].join('\n');
 
   // Troque pelo WhatsApp comercial com DDI + DDD + número, somente dígitos.
-  const whatsapp = '5522999999999';
+  const whatsapp = '5522998816184';
   window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   form.reset();
   alert('Solicitação registrada! Vamos continuar pelo WhatsApp.');
